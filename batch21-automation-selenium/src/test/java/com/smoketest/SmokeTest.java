@@ -1,19 +1,20 @@
 package com.smoketest;
 
+import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
-import com.practice.BaseLogin;
+import com.generic.Baselogin;
 
 public class SmokeTest 
 {
-	static WebDriver driver;
-	
-	public static void main(String[] args)throws InterruptedException
+	Logger logger = Logger.getLogger(SmokeTest.class);
+	@Test
+	public void getSignin() throws Throwable
 	{
-		BaseLogin obj = new BaseLogin(driver);
-		
+		Baselogin obj = new Baselogin();
 		obj.getLogin();
-	}
-	
-	
+	}	
 }
+
